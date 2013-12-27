@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<!-- This is my test audio example from the lynda series -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>
+		Mikes HTML5 Audio and Video
+	</title>
+	<script>
+				var video;
+        function init() {
+            video = document.getElementById('video1');
+        }
+        function play() { video.play(); }
+        function pause() { video.pause(); }
+        function rewind() { video.currentTime = 0; }
+        window.onload = init;
+	</script>
+</head>
+<body>
+
+	<h1>
+		Mikes HTML5 Audio and Video
+	</h1>
+
+<p> Here's a song: </p>
+<audio id="audio1" controls>
+	<source src="made_of_stone.mp3" type="audio/mpeg" />
+	<p> Your browser does not support the HTML5 audio feature</p>
+</audio>
+<p> Here's a video: </p>
+<video id="video1" width="860" height="480" controls>
+    <source src="gle1.mp4" type="video/mp4" />
+       <p> Your browser does not support the HTML5 video feature. </p>
+</video>
+<form>
+	<input type="button" value="Play" onclick="play()" />
+	<input type="button" value="Pause" onclick="pause()" />
+	<input type="button" value="Rewind" onclick="rewind()" />
+</form>
+
+</body>
+</html>
